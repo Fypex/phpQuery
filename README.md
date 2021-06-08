@@ -3,7 +3,6 @@ phpQuery
 
 Project phpQuery
 
-Archived project. No maintenance.
 ---------------------------------
 
-This project is not maintained anymore and is archived. Feel free to fork and make your own changes if needed.
+Forked to make changes under php 7.4

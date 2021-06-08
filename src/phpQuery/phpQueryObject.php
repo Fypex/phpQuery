@@ -1123,7 +1123,7 @@ class phpQueryObject
                 $param = trim($args, "\"'");
                 if (!$param)
                     break;
-                if ($param{0} == 'n')
+                if ($param[0] == 'n')
                     $param = '1' . $param;
                 if ($param == 'even' || $param == 'odd')
                     $mapped = $this->map(
@@ -1139,17 +1139,17 @@ class phpQueryObject
                         },
                         new CallbackParam(), $param
                     );
-                else if (mb_strlen($param) > 1 && $param{1} == 'n')
+                else if (mb_strlen($param) > 1 && $param[1] == 'n')
                     // an+b
                     $mapped = $this->map(
                         function ($node) use ($param) {
                             $prevs = pq($node)->prevAll()->size();
                             $index = 1 + $prevs;
                             $b = mb_strlen($param) > 3
-                                ? $param{3}
+                                ? $param[3]
                                 : 0;
-                            $a = $param{0};
-                            if ($b && $param{2} == "-")
+                            $a = $param[0];
+                            if ($b && $param[2] == "-")
                                 $b = -$b;
                             if ($a > 0) {
                                 return ($index - $b) % $a == 0

@@ -1,9 +1,9 @@
 {
-    "name": "coderockr/php-query",
+    "name": "fypex/php-query",
     "description": "phpQuery",
     "keywords": ["phpQuery", "lib"],
     "type": "library",
-    "homepage": "https://github.com/coderockr/phpQuery",
+    "homepage": "https://github.com/fypex/phpQuery",
     "license": "Mit",
     "authors": [
         {
